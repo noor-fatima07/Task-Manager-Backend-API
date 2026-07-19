@@ -1,0 +1,16 @@
+// data/tasks.js
+// ----------------------------------------------------
+// Yeh humara "fake database" hai (in-memory array).
+// Project 2 mein database use nahi karna — abhi sirf
+// API logic pe focus hai. Server restart hone par
+// yeh data reset ho jayega (yeh normal hai for now).
+// ----------------------------------------------------
+
+let tasks = [
+  { id: 1, title: "Learn Express basics", done: false },
+  { id: 2, title: "Build first API endpoint", done: true },
+];
+
+let nextId = 3; // agla naya task isi id se banega
+
+module.exports = { tasks, getNextId: () => nextId++ };
